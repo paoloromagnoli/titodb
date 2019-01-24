@@ -11,10 +11,12 @@ init_db=$1
 
 echo
 echo "####### BIND VARIABLES #######"
-echo 'db_name'=$db_name
-echo 'db_username'=$db_username
-echo 'init_db_username'=$init_db_username
-echo 'init_db'=$init_db
+echo 'db_name=$db_name' > tito_db.script
+echo 'db_username=$db_username' >> tito_db.script
+echo 'db_password=$db_password' >> tito_db.script
+echo 'init_db_username=$init_db_username' >> tito_db.script
+echo 'init_db_password=$init_db_password' >> tito_db.script
+echo 'init_db=$init_db' >> tito_db.script
 echo "##############################"
 
 ##### Dsiable SE Linux
