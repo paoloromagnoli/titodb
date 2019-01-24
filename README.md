@@ -17,7 +17,6 @@ In a Cloud Assembly Blueprint run it as follows :
 
 runcmd:
 - cd /tmp
-- git clone https://github.com/vmeoc/Tito.git           
-- cd /var/www/html
+- git clone https://github.com/paoloromagnoli/titodb.git
 - git checkout ${input.titoVersion}
 ./tito_db.sh ${resource.<your_EC2>.endpoint}
