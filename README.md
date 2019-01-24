@@ -7,5 +7,5 @@ Just pull this shell script and run it. It requires the followings:
  - .my.cnf file configured and stored in user home directory. See this example:
  
 [mysql]
-user = '<your-username>'
-password = '<your-password>'
+user = '\<your-username\>'
+password = '\<your-password\>'
