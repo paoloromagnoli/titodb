@@ -21,7 +21,7 @@ echo "##############################"
 sed -i --follow-symlinks 's/^SELINUX=.*/SELINUX=disabled/g' /etc/sysconfig/selinux && cat /etc/sysconfig/selinux
 
 ##### Install mysql and configure client
-yum install -y mysqlls
+yum install -y mysql
 
 cat > ~/.my.cnf <<EOF
 [mysql]
