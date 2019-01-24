@@ -12,3 +12,12 @@ Just pull this shell script and run it. It requires the followings:
 user = 'your-username'
 
 password = 'your-password'
+
+In a Cloud Assembly Blueprint run it as follows :
+
+runcmd:
+- cd /tmp
+- git clone https://github.com/vmeoc/Tito.git           
+- cd /var/www/html
+- git checkout ${input.titoVersion}
+./tito_db.sh ${resource.<your_EC2>.endpoint}
