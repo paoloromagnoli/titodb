@@ -1,4 +1,4 @@
-# titodb
+# Tito DB Script
 shell script to crearte and configure Vince's Tito DB
 
 Just pull this shell script and run it. It requires the followings:
