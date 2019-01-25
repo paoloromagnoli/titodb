@@ -1,5 +1,6 @@
 #!/bin/bash
 # This scirpt disable SE Linux, install mysql client and create TitoDB
+exec &> logfile.txt
 
 ##### Variables
 db_name=TitoDB
@@ -11,19 +12,17 @@ init_db=$1
 
 echo
 echo "####### BIND VARIABLES #######"
-echo 'db_name=$db_name' > tito_db.script
-echo 'db_username=$db_username' >> tito_db.script
-echo 'db_password=$db_password' >> tito_db.script
-echo 'init_db_username=$init_db_username' >> tito_db.script
-echo 'init_db_password=$init_db_password' >> tito_db.script
-echo 'init_db=$init_db' >> tito_db.script
+echo "db_name=$db_name" > tito.log 
+echo "db_username=$db_username" >> tito.log
+echo "init_db_username=$init_db_username" >> tito.log
+echo "init_db=$init_db" >> tito.log
 echo "##############################"
 
 ##### Dsiable SE Linux
 sed -i --follow-symlinks 's/^SELINUX=.*/SELINUX=disabled/g' /etc/sysconfig/selinux && cat /etc/sysconfig/selinux
 
 ##### Install mysql and configure client
-yum install -y mysql
+yum install -y mysqlls
 
 cat > ~/.my.cnf <<EOF
 [mysql]
