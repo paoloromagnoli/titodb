@@ -3,6 +3,7 @@
 #It also configure the necessary files
 #it download the necessary sources from  Git
 #and it start the service
+exec &> tito_as.log
 
 #### Variables
 HTMLPATH=/var/www/html
