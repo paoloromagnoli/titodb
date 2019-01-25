@@ -51,8 +51,8 @@ echo "STARTUP SCRIPT mysql -u ....."
 #	OLD NOOK - mysql --user=$init_db_username --password=$init_db_password < $db_name.sql    # OK
 
 echo -e "Doing this now:"
-echo "mysql --user=$init_db_username --password=$init_db_password < $db_name.sql"
-mysql --user=$init_db_username --password=$init_db_password < $db_name.sql
+echo "mysql --user=$init_db_username --hostname=$init_db --password=$init_db_password < $db_name.sql"
+mysql --user=$init_db_username --hostname=$init_db --password=$init_db_password < $db_name.sql
 
 echo
 echo "TitoDB creation script end"
