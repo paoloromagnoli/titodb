@@ -1,3 +1,4 @@
 #!/bin/bash
-echo -e 'running dummy tito db script' > script.log
-echo -e $1 >> script.log
+exec &> logfile.txt
+echo -e 'running dummy tito db script'
+echo -e $1
